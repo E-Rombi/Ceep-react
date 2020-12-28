@@ -27,11 +27,15 @@ class App extends Component {
 
   render() {
       return (
-        <section>
-          <Navbar />
-          <FormularioCadastro criarNota={this.criarNota.bind(this)} />
-          <ListaDeNotas notas={this.state.notas}/>
+        <div>
+          <section className="row">
+            <Navbar />
+          </section>
+          <section className="row">
+            <FormularioCadastro criarNota={this.criarNota.bind(this)} />
+            <ListaDeNotas notas={this.state.notas}/>
         </section>
+        </div>
     );
   }
 }
